@@ -18,7 +18,8 @@
       <p>{{ cfg.blog_tagline }}</p>
     </div>
     <div class="fl_right">
-        <!--<a href="#"><img src="{{ shared_url('mg_theme::images') }}/demo/468x60.gif" alt="" /></a>-->
+        <!--<img src="{{ shared_url('mg_theme::open_arms.png') }}" alt="" />
+        -->
     </div>
     <br class="clear" />
   </div>
@@ -53,8 +54,43 @@
 
     </div>
     <div class="column">
-
+        <div class="subnav">
         {{ render_widgets() }}
+        </div>
+
+        <div id="twitter-widget">
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 4,
+        interval: 6000,
+        width: 250,
+        height: 300,
+        theme: {
+            shell: {
+            background: '#333333',
+            color: '#ffffff'
+            },
+            tweets: {
+            background: '#000000',
+            color: '#ffffff',
+            links: '#4aed05'
+            }
+        },
+        features: {
+            scrollbar: false,
+            loop: false,
+            live: false,
+            hashtags: true,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+        }
+        }).render().setUser('bikegriffith').start();
+        </script>
+        </div>
 
     </div>
     <br class="clear" />
