@@ -1,6 +1,41 @@
 {{ widgets.latest_posts(limit=10, show_title=true) }}
 {{ widgets.category_list(show_title=true) }}
 {{ widgets.post_archive_summary('months', 6, show_title=true) }}
+
+<div id="twitter-widget">
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 6000,
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('bikegriffith').start();
+</script>
+</div>
+
 {% if request.user.is_manager %}
 <h3>{{ _('Administration') }}</h3>
 <p>

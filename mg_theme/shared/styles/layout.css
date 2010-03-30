@@ -29,7 +29,7 @@ img{display:block; margin:0; padding:0; border:none;}
 .clear{clear: both;}
 br.clear{clear:both; margin-top:-15px;}
 
-a{outline:none; text-decoration:none; color:#059BD8; background-color:#FFFFFF;}
+a{outline:none; text-decoration:none; color:#059BD8;}
 
 .fl_left{float:left;}
 .fl_right{float:right;}
