@@ -64,9 +64,14 @@
 <div class="wrapper">
   <div id="socialise">
     <ul>
-      <li><a href="#"><img src="{{ shared_url('mg_theme::images') }}/facebook.gif" alt="" /><span>Facebook</span></a></li>
-      <li><a href="#"><img src="{{ shared_url('mg_theme::images') }}/rss.gif" alt="" /><span>FeedBurner</span></a></li>
-      <li class="last"><a href="#"><img src="{{ shared_url('mg_theme::images') }}/twitter.gif" alt="" /><span>Twitter</span></a></li>
+      <li><a href="{{ url_for('blog/atom_feed')|e }}"><img src="{{
+          shared_url('mg_theme::images') }}/rss.gif" alt="rss" /></a></li>
+      <li><a href="http://www.facebook.com/profile.php?id=15501873"><img src="{{
+          shared_url('mg_theme::images') }}/facebook.gif" alt="Facebook" /></a></li>
+      <li><a href="http://www.linkedin.com/in/michaeldgriffith"><img src="{{
+          shared_url('mg_theme::images') }}/linkedin.gif" alt="LinkedIn" /></a></li>
+      <li class="last"><a href="http://twitter.com/bikegriffith"><img src="{{
+          shared_url('mg_theme::images') }}/twitter.gif" alt="Twitter" /></a></li>
     </ul>
     <br class="clear" />
   </div>
