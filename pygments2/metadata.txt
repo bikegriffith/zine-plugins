@@ -1,0 +1,14 @@
+Name: Pygments Support 0.2
+Name[de]: Pygments Unterstützung
+Plugin URL: http://zine.pocoo.org/plugins/pygments_support
+Author: Mike Griffith <bikegriffith@gmail.com>
+Author URL: http://www.mike-griffith.com/
+License: BSD
+Version: 0.2
+Description: Adds support for <a href="http://pygments.org/">pygments</a>\
+ highlighted code blocks. Blocks marked with <code>&lt;pre\
+ lang="language"&gt;</code> are highlighted using the Pygments\
+ lexer defined in the <tt>syntax</tt> attribute.
+Description[de]: Fügt Unterstützung für <a href="http://pygments.org/">Pygments</a>\
+ zu Zine hinzu.  Mit <code>&lt;sourcecode syntax="language"&gt;</code>\
+ markierte Blöcke werden von Pygments automatisch hervorgehoben.
