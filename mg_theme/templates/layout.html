@@ -31,9 +31,10 @@
         <li{% if request.path == '/' %} class="active"{% endif %}><a href="/">Home</a></li>
         
         <li{% if request.path == '/archive' %} class="active"{% endif %}><a href="/archive">Archive</a></li>
-        <li{% if request.path == '/about' %} class="active"{% endif %}><a href="/about">About</a></li>
         <li{% if request.path == '/photography' %} class="active"{% endif %}><a href="/photography">Photography</a></li>
-        <li class="last{% if request.path == '/projects' %} active{% endif %}"><a href="/projects">Projects</a></li>
+        <li{% if request.path == '/portfolio' %} class="active"{% endif %}><a href="/portfolio">Portfolio</a></li>
+        <li{% if request.path == '/projects' %} class="active"{% endif %}><a href="/projects">Projects</a></li>
+        <li class="last{% if request.path == '/contact' %} active{% endif %}"><a href="/contact">Contact</a></li>
       </ul>
     </div>
     <div id="search"></div>
