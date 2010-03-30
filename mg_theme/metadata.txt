@@ -1,0 +1,10 @@
+Name: MG Theme
+Name[de]: MG Thema
+Plugin URL: http://zine.pocoo.org/plugins/pygments_support
+Author: Mike Griffith <bikegriffith@gmail.com>
+Author URL: http://www.mike-griffith.com/
+License: BSD
+Version: 0.1
+Description: A simple default theme
+Description[de]: Ein einfaches Standarddesign
+Preview: mg_theme::preview.png
