@@ -3,30 +3,118 @@
 <html lang="{{ cfg.language|e }}">
 <head>
   <title>{% block title %}{% endblock %} &mdash; {{ cfg.blog_title|e }}</title>
-  <link rel="stylesheet" type="text/css" href="{{ shared_url('vessel_theme::style.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ shared_url(cfg['vessel_theme/variation']) }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ shared_url('mg_theme::styles') }}/layout.css">
+  <link rel="stylesheet" type="text/css" href="{{ shared_url('mg_theme::style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ shared_url(cfg['mg_theme/variation']) }}">
+  <script type="text/javascript" src="{{ shared_url('mg_theme::scripts') }}/jquery-1.4.1.min.js"></script> 
+  <script type="text/javascript" src="{{ shared_url('mg_theme::scripts') }}/jquery.easing.1.3.js"></script> 
+  <script type="text/javascript" src="{{ shared_url('mg_theme::scripts') }}/jquery.timers.1.2.js"></script> 
+  <script type="text/javascript" src="{{ shared_url('mg_theme::scripts') }}/jquery.galleryview.2.1.1.min.js"></script> 
+  <script type="text/javascript" src="{{ shared_url('mg_theme::scripts') }}scripts/jquery.galleryview.setup.js"></script> 
   {{ get_page_metadata() }}
 </head>
-<body>
-  <div class="page">
-    <div class="header">
+<body id="top">
+
+<!--
+<div class="wrapper col0">
+  <div id="topline">
+    <p></p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/archive">Archive</a></li>
+      <li><a href="/about">About</a></li>
+      <li class="last"><a href="/project">Projects</a></li>
+    </ul>
+    <br class="clear" />
+  </div>
+</div>
+-->
+
+<div class="wrapper">
+  <div id="header">
+    <div class="fl_left">
       <h1><a href="{{ url_for('blog/index')|e }}">{{ cfg.blog_title|e }}</a></h1>
-      <p class="description">{{ cfg.blog_tagline }}</p>
+      <p>{{ cfg.blog_tagline }}</p>
     </div>
-    <div class="contentwrapper">
-      <div class="contents">
+    <div class="fl_right">
+        <!--<a href="#"><img src="{{ shared_url('mg_theme::images') }}/demo/468x60.gif" alt="" /></a>-->
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/archive">Archive</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/photography">Photography</a></li>
+        <li class="last"><a href="/project">Projects</a></li>
+      </ul>
+    </div>
+    <div id="search">
+    <!--
+      <form action="/search" method="get">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" name="q" value="search..." onfocus="this.value=(this.value=='search...') ? '' : this.value ;" />
+          <input type="submit" value="Search" />
+        </fieldset>
+      </form>
+    -->
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+
+
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+      <div id="featured_slide">
+
         {{ emit_event('before-contents-rendered') }}
         {% block contents %}{% endblock %}
         {{ emit_event('after-contents-rendered') }}
+
       </div>
-      <div class="sidebar">
+    </div>
+    <div class="column">
+
         {{ render_widgets() }}
-      </div>
+
     </div>
-    <div class="footer">
-      <p>{% trans zine='<a href="http://zine.pocoo.org/">Zine</a>'
-        %}Proudly powered by {{ zine }}.{% endtrans %}</p>
-    </div>
+    <br class="clear" />
   </div>
+</div>
+
+
+<div class="wrapper">
+  <div id="socialise">
+    <ul>
+      <li><a href="#"><img src="{{ shared_url('mg_theme::images') }}/facebook.gif" alt="" /><span>Facebook</span></a></li>
+      <li><a href="#"><img src="{{ shared_url('mg_theme::images') }}/rss.gif" alt="" /><span>FeedBurner</span></a></li>
+      <li class="last"><a href="#"><img src="{{ shared_url('mg_theme::images') }}/twitter.gif" alt="" /><span>Twitter</span></a></li>
+    </ul>
+    <br class="clear" />
+  </div>
+</div>
+
+
+<div class="wrapper col8">
+  <div id="copyright">
+    <p class="fl_right">{% trans
+        zine='<a href="http://zine.pocoo.org/">Zine</a>',
+        python='<a href="http://python.org/">Python</a>',
+        mysql='<a href="http://dev.mysql.com/">MySQL</a>'
+    %}Proudly powered by {{ zine }}, {{ python }}, {{ mysql }}.{% endtrans %}</p>
+    <br class="clear" />
+  </div>
+</div>
+
+
 </body>
 </html>
