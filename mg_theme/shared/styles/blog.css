@@ -4,68 +4,16 @@ body {
     padding: 0;
 }
 
-div.header {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+div.content {
+	display:block;
+	width:630px;
+	margin:0;
+	padding:0;
+	font-family:Georgia, "Times New Roman", Times, serif;
 }
 
-div.header h1 {
-    margin: 0;
-    font-size: 1.8em;
-    font-weight: normal;
-}
-
-div.header h1 a {
-    text-decoration: none;
-}
-
-div.header p.description {
-    margin: 0 0 0 1.4em;
-    padding: 0;
-}
-
-div.footer {
-    clear: both;
-}
-
-div.footer p {
-    margin: 0;
-    padding: 0.8em;
-    font-size: 0.85em;
-    text-align: right;
-}
-
-div.page {
-    background: white;
-    margin: 0 auto 0 auto;
-    width: 40em;
-    border: 1px solid #B4D2E7;
-}
-
-div.contentwrapper {
-    padding: 0 1em;
-}
-
-div.contents {
-    width: 28em;
-    float: left;
-}
-
-div.sidebar {
-    width: 9.5em;
-    font-size: 0.9em;
-    float: right;
-}
-
-div.sidebar h3 {
-    font-size: 1.2em;
-    font-weight: normal;
-}
-
-div.sidebar ul,
-div.sidebar ol {
-    margin: 0.5em 0 0.5em 0;
-    padding: 0 0 0 1.5em;
+div.entry {
+    margin: 0 0 2em 0;
 }
 
 h2 {
@@ -86,10 +34,6 @@ h3 a {
 p {
     margin: 0.8em 0 0.8em 0;
     line-height: 1.3em;
-}
-
-div.tag-cloud {
-    font-size: 0.8em;
 }
 
 p.meta {

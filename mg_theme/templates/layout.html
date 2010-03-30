@@ -45,13 +45,11 @@
 <div class="wrapper">
   <div class="container">
     <div class="content">
-      <div id="featured_slide">
 
         {{ emit_event('before-contents-rendered') }}
         {% block contents %}{% endblock %}
         {{ emit_event('after-contents-rendered') }}
 
-      </div>
     </div>
     <div class="column">
 
