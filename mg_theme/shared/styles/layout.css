@@ -123,6 +123,16 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	overflow:hidden;
 	}
 
+#header #bgimg {
+    width: 136px;
+    height: 168px;
+    position: absolute;
+    right: 10px;
+    top: -3px;
+    background-image:url(../images/chicken_beer_sm.jpg);
+    background-repeat:no-repeat;
+}
+
 #header h1, #header p, #header ul{
 	margin:0;
 	padding:0;
