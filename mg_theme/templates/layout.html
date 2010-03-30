@@ -30,11 +30,12 @@
   <div id="topbar">
     <div id="topnav">
       <ul>
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/archive">Archive</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/photography">Photography</a></li>
-        <li class="last"><a href="/project">Projects</a></li>
+        <li{% if request.path == '/' %} class="active"{% endif %}><a href="/">Home</a></li>
+        
+        <li{% if request.path == '/archive' %} class="active"{% endif %}><a href="/archive">Archive</a></li>
+        <li{% if request.path == '/about' %} class="active"{% endif %}><a href="/about">About</a></li>
+        <li{% if request.path == '/photography' %} class="active"{% endif %}><a href="/photography">Photography</a></li>
+        <li class="last{% if request.path == '/projects' %} active{% endif %}"><a href="/projects">Projects</a></li>
       </ul>
     </div>
     <div id="search"></div>
